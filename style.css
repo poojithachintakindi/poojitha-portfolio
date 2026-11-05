@@ -1,0 +1,908 @@
+
+/* =========================================
+   1. GENERAL RESET AND BODY
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #0f172a;
+    color: #e2e8f0;
+    line-height: 1.7;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+
+/* =========================================
+   2. HOME / PROFILE PAGE
+========================================= */
+
+.profile-page {
+    width: 90%;
+    max-width: 950px;
+    margin: 60px auto 40px;
+    padding: 45px 35px;
+    text-align: center;
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.profile-image {
+    width: 170px;
+    height: 170px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #a78bfa;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+}
+.profile-image img:hover {
+    transform: scale(1.05);
+}
+
+.profile-page h1 {
+    font-size: 36px;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+.profile-page h2 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #a78bfa;
+    margin-bottom: 22px;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.contact-links a {
+    padding: 9px 22px;
+    border: 1px solid #8b5cf6;
+    border-radius: 25px;
+    color: #c4b5fd;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.contact-links a:hover {
+    background: #8b5cf6;
+    color: white;
+    transform: translateY(-3px);
+}
+
+.college {
+    margin: 25px auto;
+    line-height: 2;
+}
+
+.college p {
+    color: #94a3b8;
+}
+
+.college a {
+    color: #c4b5fd;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.college a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    .profile-page {
+        width: 88%;
+        padding: 30px 15px;
+        margin: 30px auto;
+    }
+
+    .profile-page h1 {
+        font-size: 28px;
+    }
+
+    .profile-page h2 {
+        font-size: 16px;
+    }
+
+    .profile-image img {
+        width: 140px;
+        height: 140px;
+    }
+}
+
+
+
+/* =========================================
+   3. PORTFOLIO NAVIGATION
+========================================= */
+
+.portfolio-menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 35px;
+}
+
+.portfolio-menu a {
+    background: #334155;
+    color: #e2e8f0;
+    padding: 11px 18px;
+    border-radius: 8px;
+    border: 1px solid #475569;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+.portfolio-menu a:hover {
+    background: #7c3aed;
+    border-color: #a78bfa;
+    color: white;
+    transform: translateY(-4px);
+}
+
+
+/* =========================================
+   4. COMMON PAGE CONTAINERS
+========================================= */
+
+.skills-page,
+.about-page,
+.projects-page,
+.education-page,
+.experience-page,
+.achievements-page,
+.certifications-page,
+.contact-page {
+    width: 90%;
+    max-width: 950px;
+    margin: 55px auto;
+    padding: 40px 35px;
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 18px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+}
+
+
+/* Common Page Headings */
+
+.skills-page h1,
+.about-page h1,
+.projects-page h1,
+.education-container h1,
+.experience-container h1,
+.achievements-container h1,
+.certifications-container h1,
+.contact-container h1 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.skills-intro,
+.projects-intro,
+.education-subtitle,
+.experience-subtitle,
+.achievements-subtitle,
+.certifications-subtitle,
+.contact-subtitle {
+    text-align: center;
+    color: #94a3b8;
+    margin-bottom: 35px;
+    font-size: 15px;
+}
+
+
+/* =========================================
+   5. ABOUT PAGE
+========================================= */
+
+.about-page p {
+    color: #cbd5e1;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.about-page h2 {
+    color: #c4b5fd;
+    margin: 22px 0 12px;
+}
+
+
+/* =========================================
+   6. SKILLS PAGE
+========================================= */
+
+.skills-page {
+    max-width: 850px;
+}
+
+/* Skill Card */
+
+.skill-card {
+    background: #263449;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: 1px solid #475569;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.skill-card:hover {
+    border-color: #a78bfa;
+}
+
+/* Skill Heading */
+
+.skill-title {
+    width: 100%;
+    padding: 18px 20px;
+    background: #334155;
+    color: #ffffff;
+    border: none;
+    text-align: left;
+    font-size: 17px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s ease;
+}
+
+.skill-title:hover {
+    background: #43336b;
+}
+
+/* Arrow */
+
+.skill-title .arrow {
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+    transform: rotate(45deg);
+    transition: transform 0.3s ease;
+}
+
+/* Hide Skills Initially */
+
+.skill-content {
+    display: none;
+    padding: 18px 20px;
+    background: #1e293b;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+/* Show Skills When Heading Is Clicked */
+
+.skill-card.active .skill-content {
+    display: flex;
+}
+
+/* Active Heading */
+
+.skill-card.active .skill-title {
+    background: #7c3aed;
+    color: #ffffff;
+}
+
+/* Rotate Arrow */
+
+.skill-card.active .skill-title .arrow {
+    transform: rotate(225deg);
+}
+
+/* Individual Skills */
+
+.skill-content span {
+    display: inline-block;
+    background: #43336b;
+    color: #ddd6fe;
+    border: 1px solid #6d50a5;
+    padding: 9px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+/* =========================================
+   7. PROJECTS PAGE
+========================================= */
+
+.project-card {
+    background: #263449;
+    border: 1px solid #475569;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 22px;
+    transition: 0.3s ease;
+}
+
+.project-card:hover,
+.project-card.active {
+    border-color: #a78bfa;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(124, 58, 237, 0.12);
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.project-header h2 {
+    color: #c4b5fd;
+    font-size: 21px;
+}
+
+.project-card p {
+    color: #cbd5e1;
+    margin-bottom: 12px;
+    font-size: 15px;
+}
+
+.github-link {
+    display: inline-block;
+    padding: 7px 16px;
+    background: #7c3aed;
+    color: white;
+    border-radius: 7px;
+    font-size: 13px;
+    transition: 0.3s ease;
+}
+
+.github-link:hover {
+    background: #6d28d9;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-top: 18px;
+}
+
+.project-tech span {
+    background: #43336b;
+    color: #ddd6fe;
+    border: 1px solid #6d50a5;
+    border-radius: 20px;
+    padding: 6px 13px;
+    font-size: 13px;
+}
+
+
+/* =========================================
+   8. EDUCATION PAGE
+========================================= */
+
+.education-item {
+    background: #263449;
+    border-left: 4px solid #8b5cf6;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 22px;
+    transition: 0.3s ease;
+}
+
+.education-item:hover,
+.education-item.active {
+    background: #334155;
+    transform: translateX(5px);
+}
+
+.education-content h2 {
+    color: #c4b5fd;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.education-content h3 {
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.college-link {
+    color: #e2e8f0;
+}
+
+.college-link:hover {
+    color: #a78bfa;
+}
+
+.education-year {
+    color: #a78bfa;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.education-score {
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+
+/* =========================================
+   9. INTERNSHIPS / EXPERIENCE PAGE
+========================================= */
+
+.experience-item {
+    background: #263449;
+    border-left: 4px solid #8b5cf6;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 22px;
+    transition: 0.3s ease;
+}
+
+.experience-item:hover,
+.experience-item.active {
+    background: #334155;
+    transform: translateX(5px);
+}
+
+.experience-item h2 {
+    color: #c4b5fd;
+    font-size: 21px;
+    margin-bottom: 8px;
+}
+
+.experience-item h3 {
+    color: #e2e8f0;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.experience-duration {
+    color: #a78bfa;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.experience-description {
+    color: #cbd5e1;
+    font-size: 15px;
+}
+
+
+/* =========================================
+   10. CERTIFICATIONS PAGE
+========================================= */
+
+.certification-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    background: #263449;
+    border: 1px solid #475569;
+    padding: 17px 22px;
+    margin-bottom: 13px;
+    border-radius: 9px;
+    color: #e2e8f0;
+    font-size: 15px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.certification-item:hover {
+    background: #43336b;
+    border-color: #a78bfa;
+    color: white;
+    transform: translateX(5px);
+}
+
+.certification-item.clicked {
+    transform: scale(0.98);
+    border-color: #a78bfa;
+}
+
+.certification-item .arrow {
+    flex-shrink: 0;
+    transform: rotate(-45deg);
+}
+
+
+/* =========================================
+   11. ACHIEVEMENTS PAGE
+========================================= */
+
+.achievement-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    background: #263449;
+    border: 1px solid #475569;
+    border-radius: 10px;
+    padding: 23px;
+    margin-bottom: 18px;
+    transition: 0.3s ease;
+}
+
+.achievement-item:hover,
+.achievement-item.active {
+    background: #334155;
+    border-color: #a78bfa;
+    transform: translateY(-3px);
+}
+
+.achievement-item h2 {
+    color: #c4b5fd;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.achievement-item p {
+    color: #cbd5e1;
+    font-size: 15px;
+}
+
+.achievement-arrow {
+    color: #a78bfa;
+    font-size: 25px;
+    flex-shrink: 0;
+}
+
+
+/* =========================================
+   12. CONTACT PAGE
+========================================= */
+
+.contact-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 23px;
+    margin-bottom: 15px;
+    background: #263449;
+    border: 1px solid #475569;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+.contact-item:hover {
+    background: #43336b;
+    border-color: #a78bfa;
+    transform: translateX(5px);
+}
+
+.contact-item h3 {
+    color: #c4b5fd;
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+.contact-item p {
+    color: #cbd5e1;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+.contact-item > span {
+    color: #a78bfa;
+    font-size: 22px;
+}
+
+/* Contact Form (if present) */
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 13px;
+    background: #263449;
+    color: #ffffff;
+    border: 1px solid #475569;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #a78bfa;
+}
+
+.contact-form button {
+    padding: 12px 20px;
+    background: #7c3aed;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: #6d28d9;
+}
+
+
+/* =========================================
+   13. BACK BUTTON
+========================================= */
+
+.back-button {
+    text-align: center;
+    margin-top: 35px;
+}
+
+.back-button a {
+    display: inline-block;
+    padding: 11px 24px;
+    background: #7c3aed;
+    color: white;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.back-button a:hover {
+    background: #6d28d9;
+    transform: translateY(-3px);
+}
+
+
+/* =========================================
+   14. BACK TO TOP BUTTON
+========================================= */
+
+.back-to-top {
+    display: none;
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    background: #7c3aed;
+    color: #ffffff;
+    font-size: 22px;
+    z-index: 1000;
+}
+
+.back-to-top.show {
+    display: block;
+}
+
+.back-to-top:hover {
+    background: #6d28d9;
+}
+
+
+/* =========================================
+   15. FOOTER
+========================================= */
+
+footer {
+    text-align: center;
+    padding: 22px;
+    color: #94a3b8;
+    font-size: 14px;
+    border-top: 1px solid #334155;
+    margin-top: 40px;
+}
+
+
+/* =========================================
+   16. RESPONSIVE DESIGN - TABLETS
+========================================= */
+
+@media screen and (max-width: 768px) {
+
+    .profile-page,
+    .about-page,
+    .skills-page,
+    .projects-page,
+    .education-page,
+    .experience-page,
+    .achievements-page,
+    .certifications-page,
+    .contact-page {
+        width: 94%;
+        padding: 30px 22px;
+        margin: 30px auto;
+    }
+
+    .profile-page h1 {
+        font-size: 29px;
+    }
+
+    .profile-page h2 {
+        font-size: 16px;
+    }
+
+    .skills-page h1,
+    .about-page h1,
+    .projects-page h1,
+    .education-container h1,
+    .experience-container h1,
+    .achievements-container h1,
+    .certifications-container h1,
+    .contact-container h1 {
+        font-size: 27px;
+    }
+
+    .portfolio-menu {
+        gap: 10px;
+    }
+
+    .portfolio-menu a {
+        padding: 9px 13px;
+        font-size: 13px;
+    }
+
+    .project-header h2 {
+        font-size: 18px;
+    }
+}
+
+
+/* =========================================
+   17. RESPONSIVE DESIGN - MOBILE
+========================================= */
+
+@media screen and (max-width: 480px) {
+
+    .profile-page {
+        padding: 28px 16px;
+        margin-top: 20px;
+    }
+
+    .profile-image img {
+        width: 125px;
+        height: 125px;
+    }
+
+    .profile-page h1 {
+        font-size: 25px;
+    }
+
+    .profile-page h2 {
+        font-size: 14px;
+    }
+
+    .contact-links {
+        gap: 9px;
+    }
+
+    .contact-links a {
+        padding: 8px 14px;
+        font-size: 13px;
+    }
+
+    .portfolio-menu {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .portfolio-menu a {
+        text-align: center;
+        font-size: 13px;
+        padding: 11px 5px;
+    }
+
+    .profile-page,
+    .about-page,
+    .skills-page,
+    .projects-page,
+    .education-page,
+    .experience-page,
+    .achievements-page,
+    .certifications-page,
+    .contact-page {
+        padding: 25px 15px;
+    }
+
+    .skills-page h1,
+    .about-page h1,
+    .projects-page h1,
+    .education-container h1,
+    .experience-container h1,
+    .achievements-container h1,
+    .certifications-container h1,
+    .contact-container h1 {
+        font-size: 24px;
+    }
+
+    .project-card,
+    .education-item,
+    .experience-item,
+    .achievement-item {
+        padding: 18px;
+    }
+
+    .project-header {
+        align-items: flex-start;
+    }
+
+    .project-header h2 {
+        font-size: 17px;
+    }
+
+    .education-content h2,
+    .experience-item h2,
+    .achievement-item h2 {
+        font-size: 17px;
+    }
+
+    .certification-item {
+        padding: 14px;
+        font-size: 13px;
+    }
+
+    .contact-item {
+        padding: 15px;
+    }
+
+    .skill-title {
+        font-size: 15px;
+        padding: 15px;
+    }
+
+    .skill-content span {
+        font-size: 12px;
+        padding: 7px 11px;
+    }
+
+    footer {
+        font-size: 12px;
+    }
+}
